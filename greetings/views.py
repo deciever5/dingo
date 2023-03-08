@@ -8,4 +8,4 @@ def greetings(request):
 
 
 def call(request, name):
-    return HttpResponse(f'Hello {name}')
+    return HttpResponse(f'Hello {name.capitalize()}')
