@@ -1,0 +1,93 @@
+.text-center {
+    text-align: center;
+}
+        th {
+            text-align: center;
+        }
+
+
+    @media (min-width:5120px) {
+  .container {
+    max-width:5120px;
+  }
+}
+table {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+
+}
+.fields-container {
+      display: flex;
+      flex-wrap: nowrap;
+}
+
+
+.hide {
+    opacity: 0;
+}
+
+
+
+        /* Style for contact form */
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info i {
+            font-size: 32px;
+            color: #0275d8;
+            margin-right: 15px;
+        }
+        .social-icons {
+            margin-top: 25px;
+        }
+        .social-icons a {
+            font-size: 32px;
+            margin-right: 15px;
+        color: #0275d8;
+        transition: all 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+        color: #333;
+        text-decoration: none;
+        }
+        .form-control {
+        border-radius: 0;
+        border: 2px solid #ccc;
+        padding: 12px 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        box-shadow: none;
+        }
+        .form-control:focus {
+        border-color: #0275d8;
+        box-shadow: none;
+        }
+        .form-control::placeholder {
+        color: #ccc;
+        font-size: 18px;
+        }
+        textarea.form-control {
+        height: 200px;
+        }
+        .form-group button[type="submit"] {
+        background-color: #0275d8;
+        border: none;
+        color: #fff;
+        padding: 12px 40px;
+        font-size: 20px;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        }
+        .form-group button[type="submit"]:hover {
+        background-color: #01447e;
+        cursor: pointer;
+        }

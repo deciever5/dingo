@@ -1,0 +1,18 @@
+ {% extends "portfolio\\index.html" %}
+{% block content %}
+{% load static %}
+<div class="container py-5">
+    <div class="row" >
+        <div class="col-md-8">
+            <h2 class="mb-4">About Me (but not really)</h2>
+            <p>I am a passionate web developer with over 5 years of experience in creating responsive and user-friendly websites. My skills include HTML, CSS, JavaScript, jQuery, Bootstrap, and Django.</p>
+            <p>I have worked with various clients ranging from small businesses to large corporations. My aim is to create high-quality websites that not only look great but also meet the client's specific requirements.</p>
+            <p>When I'm not working, you can find me hiking in the mountains or playing guitar in my spare time.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'pinky.jpg' %}" class="img-fluid rounded-circle">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
