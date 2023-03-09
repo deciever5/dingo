@@ -5,27 +5,21 @@ from django.shortcuts import render
 # Create your views here.
 
 def main(request):
-    c = {"title": "dodawanie"}
     return render(
         request=request,
-        template_name="portfolio\\main.html",
-        context=c
+        template_name="portfolio/main.html",
     )
 
 
 def me(request):
-    c = {"title": "dodawanie"}
     return render(
         request=request,
-        template_name="portfolio\\aboutme.html",
-        context=c
+        template_name="portfolio/aboutme.html",
     )
 
 
 def contact(request):
-    c = {"title": "dodawanie"}
     return render(
         request=request,
-        template_name="portfolio\\contact.html",
-        context=c
+        template_name="portfolio/contact.html",
     )

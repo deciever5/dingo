@@ -1,79 +1,95 @@
- {% extends "portfolio\\index.html" %}
-
-{% block content %}
-{% load static %}
+{% extends "portfolio\\index.html" %} {% block content %} {% load static %}
 <head>
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <title>Contact Me</title>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 </head>
 <body>
-    <section class="  contact-section ">
-        <div class=" container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="hide contact-info">Contact Me</h2>
-                    <form class="contact-form" method="post" action="{% url 'contact' %}">
-                        {% csrf_token %}
-                        <div class="contact-info hide form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-                        </div>
-                        <div class="contact-info hide form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="contact-info hide form-group">
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
-                        </div>
-                        <div class="contact-info hide form-group">
-                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Message" required></textarea>
-                        </div>
-                        <button type="submit" class="hide contact-info btn btn-primary">Send message</button>
-                    </form>
-                </div>
-
-
-                <div class=" col-md-6 ">
-                    <h2 class = "hide contact-info">Contact Info</h2>
-                    <div class=" hide contact-info">
-                        <i class=" fas fa-map-marker-alt"></i>
-                         <p>Assa Abloy Opening Solutions Poland</p>
-                        <p>64-100 Leszno,ul. Magazynowa 4, Polska</p>
-                        <p>Marcin Kunikowski, automation manager</p>
-                    </div>
-                    <div class=" hide contact-info">
-                        <i class=" fas fa-phone"></i>
-                        <p>+48 666 079 638 wew. 817</p>
-                    </div>
-                    <div class=" hide contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <p>marcin.kunikowski@assaabloy.com</p>
-                    </div>
-
-                </div>
+  <section class="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="hide contact-info">Contact Me</h2>
+          <form class="contact-form" method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <div class="contact-info hide form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
             </div>
-</div>
-</section>
-<script>
-var contactInfoElements = document.querySelectorAll('.contact-info');
+            <div class="contact-info hide form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="contact-info hide form-group">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="contact-info hide form-group">
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="3"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="hide contact-info btn btn-primary">
+              Send message
+            </button>
+          </form>
+        </div>
 
-// Set the initial delay time
-var delay = 0.20;
+        <div class="col-md-6">
+          <h2 class="hide contact-info">Contact Info</h2>
+          <div class="hide contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Assa Abloy Opening Solutions Poland</p>
+            <p>64-100 Leszno,ul. Magazynowa 4, Polska</p>
+            <p>Marcin Kunikowski, automation manager</p>
+          </div>
+          <div class="hide contact-info">
+            <i class="fas fa-phone"></i>
+            <p>+48 666 079 638 wew. 817</p>
+          </div>
+          <div class="hide contact-info">
+            <i class="fas fa-envelope"></i>
+            <p>marcin.kunikowski@assaabloy.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="{% static 'contact.js' %}"></script>
 
-// Loop through each element and add a delay before fading in
-contactInfoElements.forEach(function(element) {
-    element.style.transition = "opacity 1s ease-in-out " + delay + "s";
-    element.style.opacity = 0;
-    setTimeout(function() {
-        element.style.opacity = 1;
-    }, delay * 500);
-    delay += 0.2;
-});
-
-</script>
 </body>
-
-
-
 
 {% endblock %}
