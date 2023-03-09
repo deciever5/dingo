@@ -23,13 +23,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav ml-auto">
-                <li class="nav-item {% if request.path == '/' %}active{% endif %}"> <a class="nav-link" href="{% url 'main' %}">Main page</a></li>
-                 <li class="nav-item {% if request.path == '/me/' %}active{% endif %}"><a class="nav-link" href="{% url 'me' %}">About Me</a></li>
-                <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item {% if request.resolver_match.url_name == 'main' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'main' %}">Main page</a>
+                </li>
+                <li class="nav-item {% if request.resolver_match.url_name == 'me' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'me' %}">About Me</a>
+                </li>
+                <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
             </ul>
-
         </div>
+
     </nav>
 </header>
 
