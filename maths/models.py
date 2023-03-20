@@ -15,7 +15,12 @@ class Math(models.Model):
     a = models.IntegerField()
     b = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
-
+    result = models.ForeignKey(
+        'maths.Result',
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
     def __str__(self):
         return f"id:{self.id}, a={self.a}, b={self.b}, op={self.operation}"
 

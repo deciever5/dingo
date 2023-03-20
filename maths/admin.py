@@ -3,7 +3,18 @@ from django.contrib import admin
 # maths/admin.py
 from django.contrib import admin
 from .models import Math, Result
+
+
 # Register your models here.
 
-admin.site.register(Math)
-admin.site.register(Result)
+class MathAdmin(admin.ModelAdmin):
+    list_display = ["id", "operation", "a", "b", "created", "result"]
+    list_filter = ["operation"]
+    search_fields = ["a", "b"]
+
+
+admin.site.register(Math, MathAdmin)
+
+@admin.register(Result)
+class ResultAdmin(admin.ModelAdmin):
+   list_display = ['id', 'value', 'error']
