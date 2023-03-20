@@ -44,9 +44,8 @@ class Migration(migrations.Migration):
                 ("created", models.DateTimeField(auto_now=True)),
                 ("modified", models.DateTimeField(auto_now_add=True)),
                 (
-                    "author_id",
+                    "author",
                     models.ForeignKey(
-                        null=True,
                         on_delete=django.db.models.deletion.CASCADE,
                         to="posts.author",
                     ),
