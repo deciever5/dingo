@@ -1,8 +1,8 @@
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render
-from maths.models import Math, Result
-from maths.forms import ResultForm
+from .models import Math, Result
+from .forms import ResultForm
 
 
 # Create your views here.

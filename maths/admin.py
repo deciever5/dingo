@@ -1,5 +1,3 @@
-from django.contrib import admin
-
 # maths/admin.py
 from django.contrib import admin
 from .models import Math, Result
@@ -15,6 +13,7 @@ class MathAdmin(admin.ModelAdmin):
 
 admin.site.register(Math, MathAdmin)
 
+
 @admin.register(Result)
 class ResultAdmin(admin.ModelAdmin):
-   list_display = ['id', 'value', 'error']
+    list_display = ['id', 'value', 'error']

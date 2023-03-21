@@ -1,0 +1,21 @@
+
+{% extends 'posts/main.html' %}
+
+{% block list %}
+   <ul>
+       Lista autorów:
+       {% for author in authors %}
+
+           <li> {{author}}</li>
+       {% endfor %}
+   </ul>
+{% endblock %}
+
+{% block form %}
+  <h2>Dodaj autora</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
