@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Author, Post
 from .forms import AuthorForm,PostForm
 
@@ -24,14 +24,11 @@ def posts_list(request):
     )
 
 
-def author_details(request):
-    authors = Author.objects.all()
+def author_details(request,author_id):
+    author = get_object_or_404(Author, pk=author_id)
     form = AuthorForm()
-    return render(
-        request=request,
-        template_name="posts/author_details.html",
-        context={"form": form, "authors": authors}
-    )
+    return render(request, 'posts/author_details.html', {'author': author, "form": form})
+
 
 
 def post_details(request):

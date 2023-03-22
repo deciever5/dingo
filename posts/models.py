@@ -24,8 +24,11 @@ class Author(models.Model):
     bio = models.TextField(blank=True, max_length=1024)
     email = models.EmailField(max_length=30, blank=True, unique=True)
 
+
     def __str__(self):
-        return self.nick
+        email_str = f" ({self.email})" if self.email else ""
+        bio_str = f" - {self.bio[:50]}..." if self.bio else ""
+        return f"{self.nick}{email_str}{bio_str}"
 
     def save(self, *args, **kwargs):
         # Validate bio max_length before saving

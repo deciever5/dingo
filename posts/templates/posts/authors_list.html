@@ -1,12 +1,11 @@
 
 {% extends 'posts/main.html' %}
 
-{% block list %}
+{% block content %}
    <ul>
        Lista autorów:
        {% for author in authors %}
-
-           <li> {{author}}</li>
+            <li><a href="{% url 'posts:author_details' author.id %}">{{author}}</a></li>
        {% endfor %}
    </ul>
 {% endblock %}
