@@ -21,6 +21,7 @@ class Math(models.Model):
         null=True,
         blank=True
     )
+
     def __str__(self):
         return f"id:{self.id}, a={self.a}, b={self.b}, op={self.operation}"
 

@@ -17,6 +17,10 @@ def authors_list(request):
 def posts_list(request):
     posts = Post.objects.all()
     form = PostForm()
+    if request.method == "POST":
+        form = PostForm(data=request.POST)
+        if form.is_valid():
+            form.save()
     return render(
         request=request,
         template_name="posts/posts_list.html",

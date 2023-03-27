@@ -1,11 +1,11 @@
 from django import forms
-from .models import Author
+from .models import Author, Post
 
 
-class PostForm(forms.Form):
-    title = forms.CharField(required=True)
-    content = forms.CharField(required=True)
-    author = forms.ModelChoiceField(queryset=Author.objects.all(), required=True)
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = "__all__"
 
 
 class AuthorForm(forms.ModelForm):
