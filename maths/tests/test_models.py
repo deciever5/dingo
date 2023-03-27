@@ -1,5 +1,5 @@
 from django.test import TestCase
-from dingo.maths.models import Math, Result
+from maths.models import Math, Result
 
 
 class MathModelTest(TestCase):

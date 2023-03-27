@@ -1,7 +1,7 @@
 from unittest import TestCase
 from django.urls import resolve
 from django.urls.exceptions import Resolver404
-from dingo.maths.views import math, add, sub, mul, div, maths_list, math_details, results_list
+from maths.views import math, add, sub, mul, div, maths_list, math_details, results_list
 
 class TestUrls(TestCase):
     def test_resolution_for_math(self):

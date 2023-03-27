@@ -1,6 +1,6 @@
-from ..forms import ResultForm
+from maths.forms import ResultForm
 from django.test import TestCase
-from dingo.maths.models import Result
+from maths.models import Result
 
 class ResultFormTest(TestCase):
 
