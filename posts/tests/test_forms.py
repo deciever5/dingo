@@ -50,7 +50,7 @@ class AuthorModelTest(TestCase):
 
         with self.assertRaises(ValidationError):
             author.save()
-            print(len(author.bio))
+
 
 
     def test_save_bio_not_too_long(self):
@@ -62,7 +62,7 @@ class AuthorModelTest(TestCase):
 
         try:
             author.save()
-            print(len(author.bio))
+
         except ValidationError:
             self.fail("ValidationError raised but it shouldn't ")
         # Check that the author was saved to the database

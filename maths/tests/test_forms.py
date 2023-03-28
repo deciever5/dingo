@@ -2,6 +2,7 @@ from ..forms import ResultForm
 from django.test import TestCase
 from ..models import Result
 
+
 class ResultFormTest(TestCase):
 
     def test_result_save_correct_data(self):
@@ -15,7 +16,8 @@ class ResultFormTest(TestCase):
         self.assertIsNotNone(r.id)
         self.assertIsNone(r.error)
 
-class Test_value_and_error_validation(TestCase):
+
+class Test_Value_And_Error_Validation(TestCase):
 
     def test_value_and_error_validation(self):
         # Both value and error are provided

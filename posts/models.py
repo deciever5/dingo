@@ -1,4 +1,5 @@
 from django.core.exceptions import ValidationError
+from django.core.validators import MaxLengthValidator
 from django.db import models
 from django_extensions.db.models import TimeStampedModel
 
@@ -21,7 +22,7 @@ class Post(TimeStampedModel):
 
 class Author(models.Model):
     nick = models.CharField(max_length=15, unique=True)
-    bio = models.TextField(blank=True, max_length=1024)
+    bio = models.TextField(blank=True, max_length=1024, validators=[MaxLengthValidator(1024, message="Bio za długie")])
     email = models.EmailField(max_length=30, blank=True, unique=True)
 
 
@@ -31,10 +32,7 @@ class Author(models.Model):
         return f"{self.nick}{email_str}{bio_str}"
 
     def save(self, *args, **kwargs):
-        try:
-            self.full_clean()
-        except ValidationError as e:
-            raise ValidationError("Bio cannot be longer than 1024 characters")
+        self.full_clean()
 
         super(Author, self).save(*args, **kwargs)
 
