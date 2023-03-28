@@ -1,17 +1,16 @@
 # maths/models.py
 from django.db import models
 
-# Create your models here.
-OPERATION_CHOICES = (
-    ("add", "add"),
-    ("sub", "sub"),
-    ("mul", "mul"),
-    ("div", "div"),
-)
-
 
 class Math(models.Model):
-    operation = models.CharField(max_length=5, choices=OPERATION_CHOICES)
+    # Create your models here.
+    class Operations(models.TextChoices):
+        ADDING = "add"
+        SUBTRACT = "sub"
+        MULTIPLICATION = "mul"
+        DIVISION = "div"
+
+    operation = models.CharField(max_length=5, choices=Operations.choices)
     a = models.IntegerField()
     b = models.IntegerField()
     created = models.DateTimeField(auto_now_add=True)
@@ -48,8 +47,8 @@ class Result(models.Model):
                             error__isnull=True,
                         )
                         | models.Q(
-                    value__isnull=True,
-                    error__isnull=False,
+                    value__isnull = True,
+                    error__isnull = False,
                 )
                 ),
             )

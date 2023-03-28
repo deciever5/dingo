@@ -18,7 +18,8 @@ class AuthorModelTest(TestCase):
     def test_author_save_validates_bio_length(self):
         long_bio = "a" * 1025
         author = Author(nick="John", bio=long_bio, email="john@example.com")
-        self.assertRaises(ValidationError, author.save)
+        with self.assertRaisesRegex(ValidationError, "Bio cannot be longer than 1024 characters"):
+            author.save()
 
 
 class PostModelTest(TestCase):

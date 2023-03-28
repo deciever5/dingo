@@ -31,8 +31,10 @@ class Author(models.Model):
         return f"{self.nick}{email_str}{bio_str}"
 
     def save(self, *args, **kwargs):
-        # Validate bio max_length before saving
-        if self.bio and len(self.bio) > 1024:
+        try:
+            self.full_clean()
+        except ValidationError as e:
             raise ValidationError("Bio cannot be longer than 1024 characters")
 
         super(Author, self).save(*args, **kwargs)
+

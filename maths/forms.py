@@ -7,9 +7,9 @@ class ResultForm(forms.ModelForm):
         value = cleaned_data.get('value')
         error = cleaned_data.get('error')
 
-        if value and error:
+        if all([value, error]):
             raise forms.ValidationError("Podaj tylko jedną z wartości")
-        elif not (value or error):
+        elif not any([value, error]):
             raise forms.ValidationError("Nie podano żadnej wartości!")
 
     class Meta:
