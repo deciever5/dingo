@@ -3,10 +3,19 @@
 {% block title %}Maths list{% endblock %}
 
 {% block content %}
-   <ul>
-       {% for m in maths %}
-           {# <li><a href="/maths/histories/{{ m.id }}">{{ m }}</a></li> #}
-           <li><a href="{% url "maths:details" m.id %}">{{ m }}</a></li>
-       {% endfor %}
-   </ul>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Maths list</h2>
+            <ul class="list-group">
+                {% for m in maths %}
+                    {# <li><a href="/maths/histories/{{ m.id }}">{{ m }}</a></li> #}
+                    <li class="list-group-item">
+                        <a href="{% url "maths:details" m.id %}">{{ m }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -21,7 +21,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="hide contact-info">Contact Me</h2>
-          <form class="contact-form" method="post" action="{% url 'contact' %}">
+          <form class="contact-form" method="post" action="{% url 'portfolio:contact' %}">
             {% csrf_token %}
             <div class="contact-info hide form-group">
               <input
