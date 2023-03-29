@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import greetings, call
+from greetings.views import  welcome
 
 urlpatterns = [
-    path('', greetings),
-    path('<name>', call),
+   path('', welcome, name="welcome"),
+
 ]

@@ -1,3 +1,5 @@
+{% extends 'greetings/main.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
   {% load static %}
@@ -62,7 +64,7 @@
         {% endwith %}
       </nav>
     </header>
-
+{% block main %}
     <main>
 
       <br />
@@ -71,7 +73,7 @@
       <div class="container col-10 mt-5">{% block content %} {%endblock %}</div>
       <br /><br /><br /><br />
     </main>
-
+{%endblock %}
     <footer class="bg-primary text-white py-4 fixed-bottom">
       <div class="container">
         <div class="row">

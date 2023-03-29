@@ -4,6 +4,10 @@ import os
 import sys
 
 
+# Dodaj katalog projektu do ścieżki PYTHONPATH
+project_path = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(project_path)
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dingo.settings")

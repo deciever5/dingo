@@ -1,0 +1,204 @@
+[
+  {
+    "model": "maths.result",
+    "pk": 1,
+    "fields": {
+      "value": 1,
+      "error": null
+    }
+  },
+  {
+    "model": "maths.result",
+    "pk": 2,
+    "fields": {
+      "value": 2,
+      "error": null
+    }
+  },
+  {
+    "model": "maths.result",
+    "pk": 3,
+    "fields": {
+        "value": -4.0,
+        "error": null
+    }
+},
+{
+    "model": "maths.result",
+    "pk": 4,
+    "fields": {
+        "value": 5.5,
+        "error": null
+    }
+},
+{
+    "model": "maths.result",
+    "pk": 5,
+    "fields": {
+        "value": -10,
+        "error": null
+    }
+},
+{
+    "model": "maths.result",
+    "pk": 6,
+    "fields": {
+        "value": 3.0,
+        "error": null
+    }
+},
+{
+    "model": "maths.math",
+    "pk": 1,
+    "fields": {
+      "operation": "add",
+      "a": 1,
+      "b": 2,
+      "created": "2023-03-14T09:30:46.983Z",
+      "result":6
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 2,
+    "fields": {
+      "operation": "sub",
+      "a": 10,
+      "b": 20,
+      "created": "2023-03-14T10:07:35.979Z",
+      "result": 5
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 3,
+    "fields": {
+      "operation": "div",
+      "a": 11,
+      "b": 2,
+      "created": "2023-03-14T10:20:34.476Z",
+      "result": 4
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 4,
+    "fields": {
+      "operation": "mul",
+      "a": -1,
+      "b": 4,
+      "created": "2023-03-15T13:21:07.484Z",
+      "result": 3
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 5,
+    "fields": {
+      "operation": "add",
+      "a": 5,
+      "b": 0.5,
+      "created": "2023-03-16T11:30:45.123Z",
+      "result": 4
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 6,
+    "fields": {
+      "operation": "sub",
+      "a": 4,
+      "b": 8,
+      "created": "2023-03-16T14:22:33.456Z",
+      "result": 3
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 7,
+    "fields": {
+      "operation": "div",
+      "a": 18,
+      "b": 6,
+      "created": "2023-03-17T10:30:51.789Z",
+      "result": 6
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 8,
+    "fields": {
+      "operation": "mul",
+      "a": -1,
+      "b": 4,
+      "created": "2023-03-18T13:33:31.234Z",
+      "result": 3
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 9,
+    "fields": {
+      "operation": "add",
+      "a": 2,
+      "b": 3.5,
+      "created": "2023-03-19T11:11:41.567Z",
+      "result": 4
+    }
+  },
+     {
+    "model": "maths.math",
+    "pk": 10,
+    "fields": {
+      "operation": "sub",
+      "a": 25,
+      "b": 35,
+      "created": "2023-03-20T12:55:55.678Z",
+      "result": 5
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 11,
+    "fields": {
+      "operation": "div",
+      "a": 21,
+      "b": 7,
+      "created": "2023-03-21T16:44:44.123Z",
+      "result": 6
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 12,
+    "fields": {
+      "operation": "mul",
+      "a": 2,
+      "b": 1.5,
+      "created": "2023-03-22T17:33:33.456Z",
+      "result": 6
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 13,
+    "fields": {
+      "operation": "add",
+      "a": 0,
+      "b": 3,
+      "created": "2023-03-23T18:22:22.789Z",
+      "result": 6
+    }
+  },
+  {
+    "model": "maths.math",
+    "pk": 14,
+    "fields": {
+      "operation": "sub",
+      "a": 35,
+      "b": 34,
+      "created": "2023-03-24T19:11:11.234Z",
+      "result": 1
+    }
+  }
+]
