@@ -2,4 +2,6 @@
 
 {% block content %}
     {{author}}
+<br>
+<a href="{% url 'posts:authors_list' %}">Back to Authors List</a>
 {% endblock %}

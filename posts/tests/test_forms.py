@@ -3,6 +3,7 @@ from posts.forms import PostForm, AuthorForm
 from posts.models import Author, Post
 from django.core.exceptions import ValidationError
 
+
 class PostFormTest(TestCase):
 
     def test_form_has_fields(self):
@@ -41,6 +42,7 @@ class AuthorFormTest(TestCase):
         form = AuthorForm(data=form_data)
         self.assertFalse(form.is_valid())
 
+
 class AuthorModelTest(TestCase):
     def test_save_bio_too_long(self):
         nick = "TestTooLong"
@@ -50,8 +52,6 @@ class AuthorModelTest(TestCase):
 
         with self.assertRaises(ValidationError):
             author.save()
-
-
 
     def test_save_bio_not_too_long(self):
         nick = "TestNotTooLong"
