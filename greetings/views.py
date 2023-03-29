@@ -1,11 +1,11 @@
-# Create your views here.
-from django.http import HttpResponse
 
+from django.shortcuts import render
 
-# Create your views here.
-def greetings(request):
-    return HttpResponse("Hello World!")
+def welcome(request):
+    return render(request, 'greetings/welcome.html')
 
+def about(request):
+    return render(request, 'greetings/about.html')
 
-def call(request, name):
-    return HttpResponse(f'Hello {name.capitalize()}')
+def contact(request):
+    return render(request, 'greetings/contact.html')
