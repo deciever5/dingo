@@ -9,7 +9,7 @@
             <h2 class="text-center">Maths list</h2>
             <ul class="list-group">
                 {% for m in maths %}
-                    {# <li><a href="/maths/histories/{{ m.id }}">{{ m }}</a></li> #}
+                    {# <li><a href="{% url "maths:histories" m.id %}" >{{ m }}</a></li> #}
                     <li class="list-group-item">
                         <a href="{% url "maths:details" m.id %}">{{ m }}</a>
                     </li>

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'posts',
     'maths',
     'portfolio',
-    'greetings',
+    'dingo',
 ]
 
 MIDDLEWARE = [
